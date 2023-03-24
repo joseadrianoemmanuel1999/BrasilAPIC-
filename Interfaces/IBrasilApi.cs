@@ -8,6 +8,9 @@ namespace BrasilAPIC_.Interfaces
 {
     public interface IBrasilApi
     {
-    
+    Task<ResponseGenerico<EnderecoModel>> buscarEnderecoPorCEP(string cep);
+    Task<ResponseGenerico<List<BancoModel>>> BuscarTodosBancos();
+    Task<ResponseGenerico<BancoModel>> BuscarBanco(string codigoBanco);
+
     }
 }

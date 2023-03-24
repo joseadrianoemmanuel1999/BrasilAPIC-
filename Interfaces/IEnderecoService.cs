@@ -8,6 +8,6 @@ namespace BrasilAPIC_.Interfaces
 {
     public interface IEnderecoService
     {
-        
+         Task<ResponseGenerico<EnderecoResponse>> buscarEndereco(string cep);
     }
 }
