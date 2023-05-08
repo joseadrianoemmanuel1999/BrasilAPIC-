@@ -9,7 +9,7 @@ namespace BrasilAPIC_.Rest
     {
         public async Task<ResponseGenerico<BancoModel>> BuscarBanco(string codigoBanco)
         {
-             var request = new HttpRequestMessage(HttpMethod.Get,$"https://brasilapi.com.br/api/cep/v1/{codigoBanco}");
+             var request = new HttpRequestMessage(HttpMethod.Get,$"https://brasilapi.com.br/api/banks/v1/{codigoBanco}");
             var response = new ResponseGenerico<BancoModel>();
             using (var client = new HttpClient())
             {
@@ -34,7 +34,7 @@ namespace BrasilAPIC_.Rest
 
         public async Task<ResponseGenerico<EnderecoModel>> buscarEnderecoPorCEP(string cep)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get,$"https://brasilapi.com.br/api#tag/CEP/paths/~1cep~1v1~1{cep}/get/banks/v1/{code}");
+            var request = new HttpRequestMessage(HttpMethod.Get,$"https://brasilapi.com.br/api/cep/v1/{cep}");
             var response = new ResponseGenerico<EnderecoModel>();
             using (var client = new HttpClient())
             {
@@ -59,7 +59,7 @@ namespace BrasilAPIC_.Rest
 
         public async Task<ResponseGenerico<List<BancoModel>>> BuscarTodosBancos()
         {
-            var request = new HttpRequestMessage(HttpMethod.Get,$"");
+            var request = new HttpRequestMessage(HttpMethod.Get,$"https://brasilapi.com.br/api/banks/v1");
             var response = new ResponseGenerico<List<BancoModel>>();
             using (var client = new HttpClient())
             {
